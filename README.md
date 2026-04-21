@@ -213,7 +213,19 @@ against the other for the Pareto front.
 
 ---
 
-## 7. Notes / gotchas
+## 7. Results
+
+Preliminary numbers from the same mechanism on cached COCO-val2017
+subsets are in [`results/README.md`](results/README.md). Short version:
+the fixed-K methods work as expected (`progressive_random` matches or
+slightly beats `progressive_learned` at matched K, with a positional
+prior driving the gap), and the variable-K `gated` method collapses to
+K~1 under any compression penalty because the decoder's positional
+queries can memorise a per-position dataset mean. Live teacher +
+augmentation (`--mode live`) is the proposed fix; results for that
+setup are pending.
+
+## 8. Notes / gotchas
 
 - **Pixel target + cached mode is slightly silly.** Cached images are
   center-cropped once; `pixel` targets on cached runs will give
@@ -231,7 +243,7 @@ against the other for the Pareto front.
   conditioning; that's the parameter you want to watch, not the
   decoder layer count.
 
-## 8. Citation
+## 9. Citation
 
 If you use this code, please cite the original proposal:
 
@@ -244,6 +256,6 @@ If you use this code, please cite the original proposal:
 }
 ```
 
-## 9. License
+## 10. License
 
 MIT.

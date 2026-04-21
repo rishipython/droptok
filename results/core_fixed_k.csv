@@ -1,0 +1,14 @@
+method,K,mask_ratio,cosine_err,avg_tokens,train_min,n_params_M,drop_schedule
+no_drop,256,0.25,0.5378,256,0.41,4.22,
+no_drop,256,0.50,0.5375,256,0.55,4.22,
+no_drop,256,0.75,0.5428,256,0.41,4.22,
+progressive_learned,32,0.25,0.5673,32,0.44,4.22,"[96, 32]"
+progressive_learned,32,0.50,0.5557,32,0.39,4.22,"[96, 32]"
+progressive_learned,32,0.75,0.5463,32,0.44,4.22,"[96, 32]"
+progressive_learned,64,0.25,0.5567,64,1.47,4.22,"[128, 64]"
+progressive_learned,128,0.25,0.5430,128,0.69,4.22,"[192, 128]"
+progressive_random,32,0.25,0.5554,32,0.64,4.22,"[96, 32]"
+progressive_random,32,0.50,0.5584,32,0.56,4.22,"[96, 32]"
+progressive_random,32,0.75,0.5661,32,0.43,4.22,"[96, 32]"
+progressive_random,64,0.25,0.5482,64,1.00,4.22,"[128, 64]"
+progressive_random,128,0.25,0.5421,128,2.45,4.22,"[192, 128]"

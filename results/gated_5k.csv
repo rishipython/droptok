@@ -1,0 +1,13 @@
+method,penalty_mode,K_min,recon_target,lambda_comp,test_err,test_metric,natural_K_mean
+gated,floor,16,dino,0.000,0.3502,cosine_err,256.0
+gated,floor,16,dino,0.001,0.4461,cosine_err,7.6
+gated,floor,16,dino,0.003,0.4598,cosine_err,5.2
+gated,floor,16,dino,0.010,0.4600,cosine_err,2.2
+gated,floor,16,dino,0.030,0.4633,cosine_err,4.5
+gated,floor,16,dino,0.100,0.4606,cosine_err,2.6
+gated,linear,,pixel,0.0000,0.7870,pixel_mse,87.2
+gated,linear,,pixel,0.0001,1.0588,pixel_mse,1.9
+gated,linear,,pixel,0.0003,1.0624,pixel_mse,1.8
+gated,linear,,pixel,0.0010,1.0679,pixel_mse,1.7
+gated,linear,,pixel,0.0030,1.0479,pixel_mse,1.4
+gated,linear,,pixel,0.0100,1.0607,pixel_mse,1.2
