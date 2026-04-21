@@ -1,0 +1,49 @@
+# Default DropTok config. Every field is optional at the CLI -- you can
+# override any of them with --flag=value on scripts/run.py.
+
+seed: 7
+
+# ---- data ----
+# cached: precomputed DINO features (fast, no augmentation)
+# live:   raw images + live teacher + augmentation
+mode: cached
+cache_root: data/coco_subset_cache
+image_root: data/coco_subset     # used when mode=live
+strength: 1.0                     # augmentation strength (mode=live only)
+
+# ---- model ----
+method: gated                     # gated | progressive_learned | progressive_random
+K_total: 64                       # fixed-K variants only; gated ignores
+grid_h: 16
+grid_w: 16
+d_teacher: 768
+image_size: 224
+d_model: 256
+n_enc_layers: 4
+n_heads: 4
+enc_ffn: 512
+drop_after_layers: [2, 3]
+mask_ratio: 0.75
+
+# ---- decoder ----
+decoder_layers: 2
+decoder_heads: 4
+decoder_ffn: 512
+
+# ---- gated only ----
+lambda_comp: 0.0                  # 0 = no compression pressure
+gate_alpha_init: 2.0
+gate_tau_init: -7.0
+gate_gumbel: false
+gate_temp: 1.0
+
+# ---- target ----
+recon_target: dino                # dino (cosine) or pixel (MSE)
+
+# ---- training ----
+epochs: 30
+batch_size: 32
+lr: 2.0e-4
+weight_decay: 0.05
+grad_clip: 1.0
+num_workers: 4

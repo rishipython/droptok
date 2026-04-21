@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+
+# artifacts
+runs/
+data/
+*.pt
+*.zip
+*.tar.gz
+
+# caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# venvs + IDE
+.venv/
+venv/
+.env
+.envrc
+.idea/
+.vscode/
